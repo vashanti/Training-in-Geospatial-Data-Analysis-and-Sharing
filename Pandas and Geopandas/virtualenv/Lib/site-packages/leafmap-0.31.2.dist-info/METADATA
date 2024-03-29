@@ -1,0 +1,243 @@
+Metadata-Version: 2.1
+Name: leafmap
+Version: 0.31.2
+Summary: A Python package for geospatial analysis and interactive mapping in a Jupyter environment.
+Home-page: https://github.com/opengeos/leafmap
+Author: Qiusheng Wu
+Author-email: giswqs@gmail.com
+License: MIT license
+Keywords: leafmap
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bqplot
+Requires-Dist: colour
+Requires-Dist: duckdb
+Requires-Dist: folium
+Requires-Dist: gdown
+Requires-Dist: geojson
+Requires-Dist: ipyevents
+Requires-Dist: ipyfilechooser
+Requires-Dist: ipyleaflet
+Requires-Dist: ipywidgets
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: pyshp
+Requires-Dist: pystac-client
+Requires-Dist: python-box
+Requires-Dist: scooby
+Requires-Dist: whiteboxgui
+Requires-Dist: xyzservices
+Provides-Extra: ai
+Requires-Dist: geopandas ; extra == 'ai'
+Requires-Dist: osmnx ; extra == 'ai'
+Requires-Dist: localtileserver >=0.10.0 ; extra == 'ai'
+Requires-Dist: rastervision ; extra == 'ai'
+Requires-Dist: pytorch-lightning ; extra == 'ai'
+Provides-Extra: all
+Requires-Dist: black ; extra == 'all'
+Requires-Dist: black[jupyter] ; extra == 'all'
+Requires-Dist: bokeh ; extra == 'all'
+Requires-Dist: boto3 ; extra == 'all'
+Requires-Dist: codespell ; extra == 'all'
+Requires-Dist: cogeo-mosaic ; extra == 'all'
+Requires-Dist: deadlink ; extra == 'all'
+Requires-Dist: earthaccess ; extra == 'all'
+Requires-Dist: ffmpeg-python ; extra == 'all'
+Requires-Dist: geopandas ; extra == 'all'
+Requires-Dist: googledrivedownloader ; extra == 'all'
+Requires-Dist: gradio ; extra == 'all'
+Requires-Dist: h5py ; extra == 'all'
+Requires-Dist: jupyter-bokeh ; extra == 'all'
+Requires-Dist: jupyterlab >=3.0.0 ; extra == 'all'
+Requires-Dist: keplergl ; extra == 'all'
+Requires-Dist: ipygany ; extra == 'all'
+Requires-Dist: ipysheet ; extra == 'all'
+Requires-Dist: ipyvtklink ; extra == 'all'
+Requires-Dist: laspy ; extra == 'all'
+Requires-Dist: localtileserver >=0.10.0 ; extra == 'all'
+Requires-Dist: lonboard ; extra == 'all'
+Requires-Dist: mapclassify >=2.4.0 ; extra == 'all'
+Requires-Dist: mss ; extra == 'all'
+Requires-Dist: netcdf4 ; extra == 'all'
+Requires-Dist: osmnx ; extra == 'all'
+Requires-Dist: owslib ; extra == 'all'
+Requires-Dist: palettable ; extra == 'all'
+Requires-Dist: panel ; extra == 'all'
+Requires-Dist: plotly ; extra == 'all'
+Requires-Dist: pmtiles ; extra == 'all'
+Requires-Dist: psycopg2 ; extra == 'all'
+Requires-Dist: pycrs ; extra == 'all'
+Requires-Dist: pydeck ; extra == 'all'
+Requires-Dist: pyntcloud[las] ; extra == 'all'
+Requires-Dist: pyvista-xarray ; extra == 'all'
+Requires-Dist: rasterio ; extra == 'all'
+Requires-Dist: rasterstats ; extra == 'all'
+Requires-Dist: rio-cogeo ; extra == 'all'
+Requires-Dist: rioxarray ; extra == 'all'
+Requires-Dist: sqlalchemy ; extra == 'all'
+Requires-Dist: streamlit-folium ; extra == 'all'
+Requires-Dist: xarray-leaflet ; extra == 'all'
+Requires-Dist: PyYAML ==6.0.1 ; extra == 'all'
+Provides-Extra: apps
+Requires-Dist: streamlit-folium ; extra == 'apps'
+Requires-Dist: voila ; extra == 'apps'
+Requires-Dist: solara ; extra == 'apps'
+Provides-Extra: backends
+Requires-Dist: bokeh ; extra == 'backends'
+Requires-Dist: keplergl ; extra == 'backends'
+Requires-Dist: pydeck ; extra == 'backends'
+Requires-Dist: plotly ; extra == 'backends'
+Provides-Extra: lidar
+Requires-Dist: ipygany ; extra == 'lidar'
+Requires-Dist: ipyvtklink ; extra == 'lidar'
+Requires-Dist: laspy ; extra == 'lidar'
+Requires-Dist: panel ; extra == 'lidar'
+Requires-Dist: pyntcloud[las] ; extra == 'lidar'
+Requires-Dist: pyvista ; extra == 'lidar'
+Provides-Extra: pmtiles
+Requires-Dist: pmtiles ; extra == 'pmtiles'
+Requires-Dist: flask ; extra == 'pmtiles'
+Requires-Dist: flask-cors ; extra == 'pmtiles'
+Provides-Extra: raster
+Requires-Dist: localtileserver >=0.10.0 ; extra == 'raster'
+Requires-Dist: jupyter-server-proxy ; extra == 'raster'
+Requires-Dist: rio-cogeo ; extra == 'raster'
+Requires-Dist: rioxarray ; extra == 'raster'
+Requires-Dist: netcdf4 ; extra == 'raster'
+Requires-Dist: pynhd ; extra == 'raster'
+Requires-Dist: py3dep ; extra == 'raster'
+Provides-Extra: sql
+Requires-Dist: psycopg2 ; extra == 'sql'
+Requires-Dist: sqlalchemy ; extra == 'sql'
+Provides-Extra: vector
+Requires-Dist: geopandas ; extra == 'vector'
+Requires-Dist: osmnx ; extra == 'vector'
+Requires-Dist: pmtiles ; extra == 'vector'
+Requires-Dist: flask ; extra == 'vector'
+Requires-Dist: flask-cors ; extra == 'vector'
+Requires-Dist: lonboard ; extra == 'vector'
+Requires-Dist: mapclassify ; extra == 'vector'
+
+# Welcome to leafmap
+
+[![image](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/opengeos/leafmap/blob/master/examples/notebooks/00_key_features.ipynb)
+[![image](https://img.shields.io/badge/Open-Planetary%20Computer-black?style=flat&logo=microsoft)](https://pccompute.westeurope.cloudapp.azure.com/compute/hub/user-redirect/git-pull?repo=https://github.com/opengeos/leafmap&urlpath=lab/tree/leafmap/examples/notebooks/00_key_features.ipynb&branch=master)
+[![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/opengeos/leafmap/blob/master)
+[![image](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opengeos/leafmap/HEAD)
+[![image](https://img.shields.io/pypi/v/leafmap.svg)](https://pypi.python.org/pypi/leafmap)
+[![image](https://img.shields.io/conda/vn/conda-forge/leafmap.svg)](https://anaconda.org/conda-forge/leafmap)
+[![image](https://static.pepy.tech/badge/leafmap)](https://pepy.tech/projects/leafmap)
+[![image](https://github.com/opengeos/leafmap/workflows/docs/badge.svg)](https://leafmap.org)
+[![image](https://github.com/opengeos/leafmap/workflows/Linux%20build/badge.svg)](https://github.com/opengeos/leafmap/actions)
+[![image](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![image](https://img.shields.io/badge/YouTube-Channel-red)](https://youtube.com/@giswqs)
+[![status](https://joss.theoj.org/papers/10.21105/joss.03414/status.svg)](https://doi.org/10.21105/joss.03414)
+
+[![logo](https://raw.githubusercontent.com/opengeos/leafmap/master/docs/assets/logo_rect.png)](https://github.com/opengeos/leafmap/blob/master/docs/assets/logo.png)
+
+**A Python package for geospatial analysis and interactive mapping in a Jupyter environment.**
+
+-   GitHub repo: <https://github.com/opengeos/leafmap>
+-   Documentation: <https://leafmap.org>
+-   PyPI: <https://pypi.org/project/leafmap>
+-   Conda-forge: <https://anaconda.org/conda-forge/leafmap>
+-   Leafmap tutorials on YouTube: <https://youtube.com/@giswqs>
+-   Free software: [MIT license](https://opensource.org/licenses/MIT)
+
+## Introduction
+
+**Leafmap** is a Python package for interactive mapping and geospatial analysis with minimal coding in a Jupyter environment. It is a spin-off project of the [geemap](https://geemap.org) Python package, which was designed specifically to work with [Google Earth Engine](https://earthengine.google.com) (GEE). However, not everyone in the geospatial community has access to the GEE cloud computing platform. Leafmap is designed to fill this gap for non-GEE users. It is a free and open-source Python package that enables users to analyze and visualize geospatial data with minimal coding in a Jupyter environment, such as Google Colab, Jupyter Notebook, and JupyterLab. Leafmap is built upon several open-source packages, such as [folium](https://github.com/python-visualization/folium) and [ipyleaflet](https://github.com/jupyter-widgets/ipyleaflet) (for creating interactive maps), [WhiteboxTools](https://github.com/jblindsay/whitebox-tools) and [whiteboxgui](https://github.com/opengeos/whiteboxgui) (for analyzing geospatial data), and [ipywidgets](https://github.com/jupyter-widgets/ipywidgets) (for designing interactive graphical user interface [GUI]). Leafmap has a toolset with various interactive tools that allow users to load vector and raster data onto the map without coding. In addition, users can use the powerful analytical backend (i.e., WhiteboxTools) to perform geospatial analysis directly within the leafmap user interface without writing a single line of code. The WhiteboxTools library currently contains **500+** tools for advanced geospatial analysis, such as [GIS Analysis](https://jblindsay.github.io/wbt_book/available_tools/gis_analysis.html), [Geomorphometric Analysis](https://jblindsay.github.io/wbt_book/available_tools/geomorphometric_analysis.html), [Hydrological Analysis](https://jblindsay.github.io/wbt_book/available_tools/hydrological_analysis.html), [LiDAR Data Analysis](https://jblindsay.github.io/wbt_book/available_tools/lidar_tools.html), [Mathematical and Statistical Analysis](https://jblindsay.github.io/wbt_book/available_tools/mathand_stats_tools.html), and [Stream Network Analysis](https://jblindsay.github.io/wbt_book/available_tools/stream_network_analysis.html).
+
+## Acknowledgments
+
+This project is supported by Amazon Web Services ([AWS](https://aws.amazon.com)).
+
+## Statement of Need
+
+There is a plethora of Python packages for geospatial analysis, such as [geopandas](https://geopandas.org) for vector data analysis and [xarray](https://docs.xarray.dev) for raster data analysis. As listed at [pyviz.org](https://pyviz.org), there are also many options for plotting data on a map in Python, ranging from libraries focused specifically on maps like [ipyleaflet](https://ipyleaflet.readthedocs.io) and [folium](https://python-visualization.github.io/folium) to general-purpose plotting tools that also support geospatial data types, such as [hvPlot](https://hvplot.pyviz.org), [bokeh](http://bokeh.org), and [plotly](https://plotly.com/python). While these tools provide powerful capabilities, displaying geospatial data from different file formats on an interactive map and performing basic analyses can be challenging, especially for users with limited coding skills. Furthermore, many tools lack bi-directional communication between the frontend (browser) and the backend (Python), limiting their interactivity and usability for exploring map data.
+
+Leafmap addresses these challenges by leveraging the bidirectional communication provided by ipyleaflet, enabling users to load and visualize geospatial datasets with just one line of code. Leafmap also provides an interactive graphical user interface (GUI) for loading geospatial datasets without any coding. It is designed for anyone who wants to analyze and visualize geospatial data interactively in a Jupyter environment, making it particularly accessible for novice users with limited programming skills. Advanced programmers can also benefit from leafmap for geospatial data analysis and building interactive web applications.
+
+## Usage
+
+Launch the interactive notebook tutorial for the **leafmap** Python package with Google Colab, Binder, or Amazon Sagemaker Studio Lab now:
+
+[![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/opengeos/leafmap/blob/master)
+[![image](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opengeos/leafmap/HEAD)
+[![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/opengeos/leafmap/blob/master/examples/notebooks/00_key_features.ipynb)
+
+Check out this excellent article on Medium - [Leafmap a new Python Package for Geospatial data science](https://link.medium.com/HRRKDcynYgb)
+
+To learn more about leafmap, check out the leafmap documentation website - <https://leafmap.org>
+
+![](https://i.imgur.com/abd8pTH.gif)
+
+## Key Features
+
+Leafmap offers a wide range of features and capabilities that empower geospatial data scientists, researchers, and developers to unlock the potential of their data. Some of the key features include:
+
+-   **Creating an interactive map with just one line of code:** Leafmap makes it easy to create an interactive map by providing a simple API that allows you to load and visualize geospatial datasets with minimal coding.
+
+-   **Switching between different mapping backends:** Leafmap supports multiple mapping backends, including ipyleaflet, folium, kepler.gl, pydeck, and bokeh. You can switch between these backends to create maps with different visualization styles and capabilities.
+
+-   **Changing basemaps interactively:** Leafmap allows you to change basemaps interactively, providing a variety of options such as OpenStreetMap, Stamen Terrain, CartoDB Positron, and many more.
+
+-   **Adding XYZ, WMS, and vector tile services:** You can easily add XYZ, WMS, and vector tile services to your map, allowing you to overlay additional geospatial data from various sources.
+
+-   **Displaying vector data:** Leafmap supports various vector data formats, including Shapefile, GeoJSON, GeoPackage, and any vector format supported by GeoPandas. You can load and display vector data on the map, enabling you to visualize and analyze spatial features.
+
+-   **Displaying raster data:** Leafmap allows you to load and display raster data, such as GeoTIFFs, on the map. This feature is useful for visualizing satellite imagery, digital elevation models, and other gridded datasets.
+
+-   **Creating custom legends and colorbars:** Leafmap provides tools for customizing legends and colorbars on the map, allowing you to represent data values with different colors and corresponding labels.
+
+-   **Creating split-panel maps and linked maps:** With Leafmap, you can create split-panel maps to compare different datasets side by side. You can also create linked maps that synchronize interactions between multiple maps, providing a coordinated view of different spatial data.
+
+-   **Downloading and visualizing OpenStreetMap data:** Leafmap allows you to download and visualize OpenStreetMap data, providing access to detailed street maps, buildings, and other points of interest.
+
+-   **Creating and editing vector data interactively:** Leafmap includes tools for creating and editing vector data interactively on the map. You can draw points, lines, and polygons, and modify them as needed.
+
+-   **Searching for geospatial data:** Leafmap provides functionality for searching and accessing geospatial data from sources such as SpatialTemporal Asset Catalogs (STAC), Microsoft Planetary Computer, AWS Open Data Registry, and OpenAerialMap.
+
+-   **Inspecting pixel values interactively:** Leafmap allows you to interactively inspect pixel values in raster datasets, helping you analyze and understand the data at a more granular level.
+
+-   **Creating choropleth maps and heat maps:** Leafmap supports the creation of choropleth maps, where colors represent different data values for specific geographic areas. You can also create heat maps to visualize data density.
+
+-   **Displaying data from a PostGIS database:** Leafmap provides tools for connecting to a PostGIS database and displaying spatial data stored in the database on the map.
+
+-   **Creating time series animations:** Leafmap enables the creation of time series animations from both vector and raster data, allowing you to visualize temporal changes in your geospatial datasets.
+
+-   **Analyzing geospatial data with whitebox:** Leafmap integrates with WhiteboxTools and whiteboxgui, providing a suite of geospatial analyses, such as hydrological analysis, terrain analysis, and LiDAR processing.
+
+-   **Segmenting and classifying remote sensing imagery:** Leafmap integrates the segment-geospatial package, which provides tools for segmenting and classifying remote sensing imagery using deep learning algorithms.
+
+-   **Building interactive web apps:** Leafmap supports the development of interactive web applications using frameworks like Voila, Streamlit, and Solara. This allows you to share your geospatial analyses and visualizations with others in a user-friendly web interface.
+
+These features and capabilities make leafmap a powerful tool for geospatial data exploration, analysis, and visualization. Whether you are a beginner or an experienced geospatial data scientist, leafmap provides an accessible and efficient way to work with geospatial data in Python.
+
+## Citations
+
+If you find **leafmap** useful in your research, please consider citing the following paper to support my work. Thank you for your support.
+
+-   Wu, Q. (2021). Leafmap: A Python package for interactive mapping and geospatial analysis with minimal coding in a Jupyter environment. _Journal of Open Source Software_, 6(63), 3414. <https://doi.org/10.21105/joss.03414>
+
+## Demo
+
+![](https://wetlands.io/file/images/leafmap_demo.gif)
+
+## YouTube Channel
+
+I have created a [YouTube Channel](https://youtube.com/@giswqs) for sharing geospatial tutorials. You can subscribe to my channel for regular updates. If there is any specific tutorial you would like to see, please submit a feature request [here](https://github.com/opengeos/leafmap/issues).
+
+[![Earth Engine Tutorials on YouTube](https://wetlands.io/file/images/youtube.png)](https://youtube.com/@giswqs)
